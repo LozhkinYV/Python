@@ -17,7 +17,7 @@ def Nambers_Vallidation(str):
 x = input('Введите значение координаты х = ')
 y = input('Введите значение координаты y = ')
 
-if (Nambers_Vallidation(x) and Nambers_Vallidation(y)):
+if (Nambers_Vallidation(x) or Nambers_Vallidation(y)):
     print("Перезапустите программу и попробуйте ввести корректные данные")
 elif float(x) > 0 and float(y) > 0:
     print("Точка находится в I четверти")
