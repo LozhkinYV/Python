@@ -11,7 +11,7 @@ def Nambers_Vallidation(str):
     except ValueError:
         return True
 
-def sum_of_digits(str):
+def Sum_Number(str):
     sum = 0
     for i in str:
         if i != ".":
@@ -24,5 +24,5 @@ number = input("N = ")
 if Nambers_Vallidation(number):
     print("\nПерезапустите программу и попробуйте ввести корректные данные")
 else:
-    print(f'\nСумма цифр числа {number} -> {sum_of_digits(number)}')
+    print(f'Сумма цифр числа {number} -> {Sum_Number(number)}')
 
