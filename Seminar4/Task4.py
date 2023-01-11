@@ -9,7 +9,7 @@ import random
 
 
 def Random_List(namber: int) -> list[int]:
-    lst = [random.randint(0, 10) for i in range(namber)]
+    lst = [random.randint(0, 101) for i in range(namber)]
     return lst
 
 
@@ -31,7 +31,11 @@ def Polynomial(namber: int, lst: list[int]) -> str:
 
 k = int(input("Введите значение натуральной степени k = "))
 my_list = Random_List(k)
-print(my_list)
+print(f'Параметры уравнения {my_list}')
 
-poly = Polynomial(k, my_list)
-print(poly)
+new_str = Polynomial(k, my_list)
+print(new_str)
+
+my_file = open("Seminar4/sem4_Task4.txt", "w+")
+my_file.write(new_str)
+my_file.close()
