@@ -1,5 +1,15 @@
-str1 = '5*x^3 + 57*x^2 + 3*x - 4 = 0'
-str2 = '5*x^2 + x = 0'
+my_file = open("Seminar4/sem4_Task5_1.txt", "r")
+str1 = my_file.read()
+my_file.close()
+my_file = open("Seminar4/sem4_Task5_2.txt", "r")
+str2 = my_file.read()
+my_file.close()
+
+print(str1)
+print(str2)
+
+# str1 = '5*x^3 + 57*x^2 + 3*x - 4 = 0'
+# str2 = '5*x^2 + x = 0'
 
 str3 = str1[:str1.find('=')] + ' + ' + str2[:str2.find(' =')]
 str3 = str3.replace('+ -', '- ')
@@ -34,5 +44,10 @@ for key in list(out_dict.keys()):
 out_str = out_str[:-3]
 out_str = out_str.replace('1*', '')
 out_str = out_str.replace(' + -', ' - ')
+out_str = (f'{out_str} = 0')
 
 print(out_str)
+
+my_file = open("Seminar4/sem4_Task5_3.txt", "w+")
+my_file.write(out_str)
+my_file.close()
