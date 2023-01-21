@@ -18,10 +18,10 @@ def encode(text: str) -> str:
         encoded += str(count) + previous 
     return encoded
 
-def decode(encodedstring):
+def decode(text: str) -> str:
     decode = ''
     count = ''
-    for char in encodedstring:
+    for char in text:
         if char.isdigit():
             count += char
         else:
